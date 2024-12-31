@@ -1,0 +1,8 @@
+body main header {
+  text-align: center;
+}
+body main header #kakao {
+  padding: 10px 50px;
+  background: yellow;
+  border-radius: 5px;
+}
