@@ -1,9 +1,16 @@
 :root {
   --main-light-color: #fff;
   --main-dark-color: #000;
+  --ranking-bg-color: #c9d5df;
+  --hr-bg-color: #1c45e3;
+  --date-font-color: #6b6b6b;
+  --callaction-bg-color: #2ecc71;
+  --must-badge-color: #e60012;
+  --good-badge-color: #00a0e9;
   --lnb-font-color: #ddd;
   --em-font-color: #bbb;
   --hover-font-color: #333;
   --btn-font-color: #c25a3a;
+  --border-bg-color: #eee;
   --Montserrat-font-family: "Montserrat", serif;
 }

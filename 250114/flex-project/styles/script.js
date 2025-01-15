@@ -21,3 +21,14 @@ window.addEventListener("scroll", () => {
     document.querySelector("header").classList.remove("active");
   }
 });
+
+/* slick-slider */
+$(document).ready(function () {
+  $(".myslider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    isFinite: false,
+    dots: true,
+    speed: 300,
+  });
+});
