@@ -1,0 +1,12 @@
+:root {
+  --main-light-color: #fff;
+  --main-dark-color: #000;
+  --sub-font-color: #bbb;
+  --text-shadow-color: #555
+  --info-font-color: #999;
+  --main-font-color: #ddd;
+  --border-main-color: #ccc;
+  --accent-icon-color: #e0ffff;
+  --accent-font-color: #00ffff;
+  --orbitron-font-style: "Orbitron", serif;
+}

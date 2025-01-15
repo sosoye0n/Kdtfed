@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 600px;
+        margin: 0 auto;
+      }
+      #cavas {
+        width: 100%;
+        height: 670px;
+        position: relative;
+        perspective: 1480px;
+        #merry {
+          position: absolute;
+          left: 50%;
+          top: 30px;
+          transform-style: preserve-3d;
+          animation: merrygoround 15s linear none infinite;
+          .face {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: -115px;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            .cell {
+              width: 230px;
+              height: 150px;
+              margin-bottom: 8px;
+              background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_20sqj8he_F2OKRZo9S5eY-nCWZRM9ZRiw&s")
+                center/cover no-repeat;
+              transition: all 0.5s;
+              &:hover {
+                transform: scale(1.2) translateZ(50px);
+              }
+            }
+            &:nth-child(1) {
+              transform: rotatey(0deg) translatez(-370px);
+            }
+            &:nth-child(2) {
+              transform: rotatey(36deg) translatez(-370px);
+            }
+            &:nth-child(3) {
+              transform: rotatey(72deg) translatez(-370px);
+            }
+            &:nth-child(4) {
+              transform: rotatey(108deg) translatez(-370px);
+            }
+            &:nth-child(5) {
+              transform: rotatey(144deg) translatez(-370px);
+            }
+            &:nth-child(6) {
+              transform: rotatey(180deg) translatez(-370px);
+            }
+            &:nth-child(7) {
+              transform: rotatey(216deg) translatez(-370px);
+            }
+            &:nth-child(8) {
+              transform: rotatey(252deg) translatez(-370px);
+            }
+            &:nth-child(9) {
+              transform: rotatey(288deg) translatez(-370px);
+            }
+            &:nth-child(10) {
+              transform: rotatey(324deg) translatez(-370px);
+            }
+          }
+        }
+      }
+
+      @keyframes merrygoround {
+        from {
+          transform: rotatey(0deg);
+        }
+        to {
+          transform: rotatey(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML5 & CSS3 Basic</h1>
+    <h2>CSS3 Transform</h2>
+    <hr />
+    <div id="cavas">
+      <div id="merry">
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
