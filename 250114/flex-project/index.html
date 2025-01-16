@@ -16,6 +16,7 @@
     ></script>
     <!-- custom css & js -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <script defer src="./styles/script.js"></script>
     <title>flex-project</title>
   </head>
@@ -42,13 +43,18 @@
             </a>
           </div>
           <ul class="gnb">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">RANKING</a></li>
-            <li><a href="#">TESTIMONITAL</a></li>
-            <li><a href="#">BLOG</a></li>
+            <li><a href="#intro">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#ranking">RANKING</a></li>
+            <li><a href="#testimonial">TESTIMONIAL</a></li>
+            <li><a href="#blog">BLOG</a></li>
           </ul>
         </nav>
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </header>
       <section id="intro" class="intro">
         <div class="inner">
@@ -151,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section id="testmonial" class="testmonial">
+      <section id="testimonial" class="testimonial">
         <div class="inner">
           <div class="testmonial-content">
             <h2>What <b>our Customers</b> are saying</h2>
@@ -231,7 +237,7 @@
           <a href="#">GET EARLY ACCESS</a>
         </div>
       </section>
-      <div id="blog" class="blog">
+      <section id="blog" class="blog">
         <div class="inner">
           <div class="blog-content">
             <div class="blog-header">
@@ -301,7 +307,7 @@
                 </div>
               </div>
               <div class="shared-post-item">
-                <h6>most shared</h6>          
+                <h6>most shared</h6>
                 <div class="post-item">
                   <div class="post-image">
                     <img src="./images/most-shared-01.jpg" alt="shared01" />
@@ -327,13 +333,67 @@
                     </p>
                     <span>Dec 21, 2024</span>
                   </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="festival">
+        <div class="festival-heading">
+          <h3><span>SEE ALL FESTIVALS</span> for the Best Trip Place</h3>
+          <div class="btns">
+            <a href="#">Mexico Festivals</a>
+            <a href="#">Barcelona Festivals</a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="inner">
+          <div class="footer-content">
+            <ul class="community">
+              <li>
+                <a href="#">Community</a>
+              </li>
+              <li>
+                <a href="#">Subscribe</a>
+              </li>
+              <li>
+                <a href="#">Give a Gift</a>
+              </li>
+              <li>
+                <a href="#">Customer Service F&Q</a>
+              </li>
+              <li>
+                <a href="#">Access Your Subscription</a>
+              </li>
+            </ul>
+            <ul class="network">
+              <li><a href="#">Network</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms Of Service</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Jobs</a></li>
+            </ul>
+            <ul class="help">
+              <li><a href="#">Help Presserve This Project</a></li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
+    <a href="#intro" class="gototop">
+      <i class="fas fa-angle-up"></i>
+    </a>
   </body>
 </html>
