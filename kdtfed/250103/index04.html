@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        counter-increment: num;
+        &::before {
+          content: counter(num) ".";
+        }
+        &::after {
+          content: "- " attr(data-page) " page";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum, dolor sit amet</h1>
+    <p data-page="52">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic dolorem
+      porro autem voluptate placeat cum quasi molestiae commodi recusandae, eum
+      quisquam, sint eveniet provident quos esse, temporibus beatae doloribus
+      nisi
+    </p>
+    <p data-page="273">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores
+      nulla tenetur quo doloremque, iste perspiciatis aperiam commodi ab
+      deleniti deserunt odit dolores facere nobis ad nihil asperiores nisi
+      magni! Commodi odio soluta debitis unde accusamus. Architecto molestias
+      assumenda distinctio nobis earum. Reiciendis ducimus unde eaque
+      dignissimos tenetur beatae nemo impedit quasi praesentium distinctio!
+      Beatae, consectetur saepe! Harum, veniam accusamus. Dolorem amet
+      voluptatum vel in alias sint eveniet architecto repudiandae necessitatibus
+      eos nihil cumque deserunt, pariatur saepe itaque veritatis possimus
+      ducimus quis facilis tenetur voluptas commodi sed excepturi unde. Ipsam.
+      Odit voluptas veritatis mollitia quasi atque vel eius ab perferendis alias
+      sed! Optio facilis, suscipit cumque doloribus sequi explicabo nihil alias.
+      Dolorum, qui dicta minus voluptates quidem dolore recusandae veritatis.
+      Dolorum perferendis doloremque ex assumenda, quia explicabo fugiat ipsa
+      perspiciatis deleniti. Eaque, doloremque porro consectetur adipisci beatae
+      ipsum accusantium consequatur pariatur earum eveniet unde alias blanditiis
+      distinctio dolor sint soluta. Ut quae nobis, numquam alias inventore
+      distinctio hic sequi! Perspiciatis cum fugit aperiam aliquam quia nostrum
+      magnam quos. Omnis deserunt est delectus dignissimos dolor temporibus
+      aperiam minus porro tenetur voluptatem?
+    </p>
+  </body>
+</html>

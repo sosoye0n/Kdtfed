@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./style01.css" /> -->
+    <title>Document</title>
+    <style>
+      /* reset css */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* h1 {
+        background: crimson;
+      } */
+
+      p {
+        color: brown;
+        &#special {
+          color: dodgerblue;
+        }
+      }
+
+      /* li {
+        &#second {
+          background: aqua;
+        }
+        &#fourth {
+          background: aqua;
+        }
+      } */
+
+      .bgStyle {
+        background: aqua;
+      }
+
+      /* input {
+        &[type="text"] {
+          background: crimson;
+        }
+        &[type="password"] {
+          background: dodgerblue;
+        }
+      } */
+
+      #header {
+        & > h1 {
+          color: brown;
+        }
+      }
+
+      /* #special {
+        color: dodgerblue;
+      } */
+
+      #listEx {
+        #firstLi + li {
+          color: crimson;
+        }
+        #firstLi ~ li {
+          font-size: 30px;
+        }
+      }
+
+      h3 {
+        &:hover {
+          color: aqua;
+          &:active {
+            color: crimson;
+          }
+        }
+      }
+
+      input {
+        &:enabled {
+          background: greenyellow;
+        }
+        &:disabled {
+          background: gainsboro;
+        }
+        &:focus {
+          background: tomato;
+        }
+      }
+
+      /* h3:hover {
+        color: aqua;
+      }
+      h3:active {
+        color: crimson;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style="background: crimson">오늘은 신나는 금요일</h1> -->
+    <h1>오늘은 신나는 금요일</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat enim
+      distinctio delectus eveniet modi aliquam animi cumque molestiae minima
+      quia corporis nemo sequi nam doloribus nesciunt amet, quos hic
+      consequatur.
+    </p>
+    <p id="special">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque aperiam
+      eligendi, fuga repellat voluptates sed ullam nisi odit sint rem ab facere
+      labore quis doloribus natus alias eveniet, iusto ratione? Temporibus
+      asperiores ex enim sapiente neque labore. At, enim molestiae ea earum
+      praesentium similique quod voluptas culpa sapiente quae eveniet officiis
+      dolorum ipsam quisquam repellat, veritatis laudantium, fugit voluptate
+      iste. Eius cumque soluta voluptates aspernatur accusantium eum natus,
+      fugiat magni, sapiente ex tenetur quam placeat incidunt maiores voluptate
+      itaque! Quasi, autem eligendi animi non explicabo veritatis at repellat
+      impedit deserunt. Illum, ratione commodi, aut iusto unde dolorem
+      voluptatibus nihil voluptatum voluptate ipsa dolores pariatur quaerat
+      officia id facilis eos modi accusamus, iste ducimus eveniet in recusandae
+      a. Laborum, temporibus ducimus!
+    </p>
+    <ul id="listEx">
+      <li id="firstLi">첫번째</li>
+      <li class="bgStyle">두번째</li>
+      <li>세번째</li>
+      <li class="bgStyle">네번째</li>
+    </ul>
+    <hr />
+    <form action="">
+      <input type="text" name="" id="" />
+      <input type="password" name="" id="" />
+    </form>
+    <hr />
+    <div id="header">
+      <h1 class="title">Lorem ipsum</h1>
+      <div id="nav">
+        <h1>Navigation</h1>
+      </div>
+    </div>
+    <h3>User Action Selector</h3>
+    <hr />
+    <form action="">
+      <h2>Enable</h2>
+      <input type="text" name="enabled" id="enabled" enabled />
+      <h2>Disable</h2>
+      <input type="text" name="disabled" id="disabled" disabled />
+    </form>
+  </body>
+</html>
