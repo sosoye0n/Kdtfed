@@ -1,0 +1,12 @@
+:root {
+  --main-light-color: #fff;
+  --main-dark-color: #000;
+  --sub-text-color: #888;
+  --info-text-color: #999;
+  --sub-bg-color: #333;
+  --pannel-bg-color: #444;
+  --border-bg-hover: #ffa500;
+  --text-bottom-line: #777;
+  --nav-text-color: #bbb;
+  --alegreya-font-family: "Alegreya Sans";
+}
