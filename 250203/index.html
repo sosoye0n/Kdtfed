@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>250203_JS</title>
+  </head>
+  <body>
+    <main id="container">
+      <form name="order" method="post" action="http://127.0.0.1:5500">
+        <fieldset>
+          <legend>상품정보</legend>
+          <ul>
+            <li>
+              <lable class="field" for="product">상품 : </lable>
+              <input
+                class="input-Box"
+                id="product"
+                type="text"
+                name="product"
+              />
+            </li>
+            <li>
+              <lable class="field" for="prod-num">개수 : </lable>
+              <input
+                id="prod-num"
+                class="input-Box"
+                type="number"
+                name="prod-num"
+                min="1"
+                value="1"
+              />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>주문정보</legend>
+          <ul>
+            <li>
+              <lable class="field" for="order-name">이름 : </lable>
+              <input
+                id="order-name"
+                class="input-Box"
+                type="text"
+                name="order-name"
+              />
+            </li>
+            <li>
+              <lable class="field" for="oreder-tel">연락처 : </lable>
+              <input
+                id="oreder-tel"
+                class="input-Box"
+                type="text"
+                name="oreder-tel"
+              />
+            </li>
+            <li>
+              <lable class="field" for="oreder-addr">주소 : </lable>
+              <input
+                id="oreder-addr"
+                class="input-Box"
+                type="text"
+                name="oreder-addr"
+              />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>세일상품</legend>
+          <ul>
+            <li>
+              <lable class="field" for="class">과일</lable>
+              <select name="fruit" id="items">
+                <option selected disabled>---- 과일선택 ----</option>
+                <option value="apple">사과</option>
+                <option value="melon">멜론</option>
+                <option value="watermelon">수박</option>
+                <option value="grape">포도</option>
+                <option value="peach">복숭아</option>
+                <option value="strawberry">딸기</option>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>신청정보</legend>
+          <p>이 달에 신청할 정보를 선택하세요</p>
+          <label class="section">
+            <input type="radio" name="info" value="promotion" />프로모션
+          </label class="section">
+          <label
+            ><input type="radio" name="info" value="gift" />선물용품
+          </label>
+          <label class="section">
+            <input type="radio" name="info" value="plus" />1+1행사
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>메일링</legend>
+          <p>메일로 받고 싶은 쇼핑 주제롤 선택해주세요</p>
+          <label class="section">
+            <input type="checkbox" name="mailing" value="baby" />육아용품
+          </label class="section">
+          <label
+            ><input type="checkbox" name="mailing" value="fashion" />패션의류
+          </label>
+          <label class="section">
+            <input type="checkbox" name="mailing" value="food" />간식/식품
+          </label>
+        </fieldset>
+
+      </form>
+    </main>
+  </body>
+</html>

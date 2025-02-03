@@ -1,0 +1,53 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  font-size: 2.5rem;
+}
+main img {
+  width: 400px;
+  height: 400px;
+}
+main .order {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #aaa;
+  background: #e9e9e9;
+  font-size: 1.6rem;
+}

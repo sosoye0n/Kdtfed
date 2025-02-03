@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style02.css" />
+    <script defer src="./script01.js"></script>
+    <title>[Test-T]할인가격 계산 프로그램</title>
+  </head>
+  <body>
+    <main id="container">
+      <form name="price-system">
+        <img
+          src="https://img.freepik.com/vektoren-premium/grossverkauf-mit-rotem-etikett-aufkleber-fuer-shop-produkt-tags-vektor-design-element_219581-972.jpg?semt=ais_hybrid"
+          alt=""
+        />
+        <ul>
+          <li>
+            <label for="origin-price">원래가격</label>
+            <input type="text" name="origin-price" id="origin-price" />
+          </li>
+          <li>
+            <label for="rate">할인률</label>
+            <input type="text" name="origin-rate" id="origin-rate" />
+          </li>
+          <li>
+            <input id="btn" type="button" value="할인가격 계산하기" />
+          </li>
+        </ul>
+      </form>
+      <div id="result"></div>
+    </main>
+  </body>
+</html>
