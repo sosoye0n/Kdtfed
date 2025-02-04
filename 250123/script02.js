@@ -9,16 +9,15 @@ console.log(fruits);
 console.log(...fruits);
 */
 
-/*
+
 const addNum = (...numbers) => {
   let sum = 0;
-  /* 1. for each문으로
+   1. for each문으로
   numbers.forEach((number) => {
     sum += number;
   });
-*/
 
-/* 2. for문으로 
+ 2. for문으로 
   for (let number of numbers) {
     sum += number;
   }
@@ -28,8 +27,6 @@ const addNum = (...numbers) => {
 
 
 console.log(addNum(1, 3, 5, 7));
-/*
-*/
 
 const displayFavorits = (first, ...fruits) => {
   const str = `내가 가장 좋아하는 과일은 ${first}입니다`;

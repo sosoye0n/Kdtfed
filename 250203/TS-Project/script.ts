@@ -3,6 +3,3 @@
 let num: number = 1;
 let str = "Hello";
 let bool = true;
-
-bool = false;
-bool = "close";

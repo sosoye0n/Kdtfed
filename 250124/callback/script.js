@@ -1,50 +1,25 @@
 // 콜백지옥 => 콜백함수를 계속 이어서 작성하는 형식
 
-// setTimeout(() => {
-//   let coffeeName = "에스프레소";
-//   console.log(coffeeName);
-//   setTimeout(() => {
-//     coffeeName = "카페라떼";
-//     console.log(coffeeName);
-//     setTimeout(() => {
-//       coffeeName = "카페모카";
-//       console.log(coffeeName);
-//       setTimeout(() => {
-//         coffeeName = "아메리카노";
-//         console.log(coffeeName);
-//       }, 2000);
-//     }, 2000);
-//   }, 2000);
-// }, 2000);
+setTimeout(() => {
+  let coffeeName = "에스프레소";
+  console.log(coffeeName);
+  setTimeout(() => {
+    coffeeName = "카페라떼";
+    console.log(coffeeName);
+    setTimeout(() => {
+      coffeeName = "카페모카";
+      console.log(coffeeName);
+      setTimeout(() => {
+        coffeeName = "아메리카노";
+        console.log(coffeeName);
+      }, 2000);
+    }, 2000);
+  }, 2000);
+}, 2000);
 
 // > 코드가 너무 길어짐 >> 쪼개서 씀
 
-// let coffeeName = "";
-
-// const addAmericano = (name) => {
-//   coffeeName += `, ${name}`;
-//   console.log(coffeeName);
-// };
-
-// const addMocha = (name) => {
-//   coffeeName += `, ${name}`;
-//   console.log(coffeeName);
-//   setTimeout(addAmericano, 2000, "아메리카노");
-// };
-
-// const addLatte = (name) => {
-//   coffeeName += `, ${name}`;
-//   console.log(coffeeName);
-//   setTimeout(addMocha, 2000, "카페모카");
-// };
-
-// const addEspresso = (name) => {
-//   coffeeName += name;
-//   console.log(coffeeName);
-//   setTimeout(addLatte, 2000, "카페라떼");
-// };
-
-// setTimeout(addEspresso, 2000, "에스프레소");
+/
 
 // > 이것조차도 비효율적 & 불편
 
