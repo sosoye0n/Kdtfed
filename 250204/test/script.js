@@ -31,14 +31,21 @@ EX) 6, 5, 11의 세 숫자를 입력받았다면, 5의 값이 콘솔창에 출�
 
 // console.log(numbers(5, 6, 11));
 
-const arr = [5, 6, 11];
+// const arr = [5, 6, 11];
 
-// const lowNumber = () => {
-// if()
-// }
+// // const lowNumber = () => {
+// // if()
+// // }
 
-arr[0] = 5;
-arr[1] = 6;
-arr[2] = 11;
+// arr[0] = 5;
+// arr[1] = 6;
+// arr[2] = 11;
 
-console.log(lowNumber);
+// console.log(lowNumber);
+
+const number = [];
+const lowNumber = {};
+
+
+
+console.log(`입력하신 숫자 중 가장 작은 수는 ${lowNumber}입니다`);
