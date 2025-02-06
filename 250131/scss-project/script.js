@@ -1,7 +1,5 @@
 /* slick slider 
 $(".")
-
-
 // document > querySellector 역할
 */
 

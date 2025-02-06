@@ -1,0 +1,18 @@
+/* reset & variables */
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+/* Common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+/* Contents */
