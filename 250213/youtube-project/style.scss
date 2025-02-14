@@ -1,0 +1,311 @@
+/* font */
+@font-face {
+  font-family: "youtube";
+  src: url("./fonts/AnyConv.com__KFOmCnqEu92Fr1Mu4mxPKTU1Kg.otf");
+}
+
+@mixin btnType {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: map-get($map: $color, $key: bg);
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  &:hover {
+    background: map-get($map: $color, $key: accent);
+    color: map-get($map: $color, $key: light);
+  }
+}
+
+/* color */
+$color: (
+  dark: #000,
+  light: #fff,
+  bg: #f0f0f0,
+  accent: #dc143c,
+  sub: #9f9f9f,
+  ad: #1a76f5,
+  ad-sub: #f1f8ff,
+);
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* common */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  font-family: "youtube";
+}
+
+/* contents */
+#container {
+  width: 360px;
+  height: 100%;
+  background: map-get($map: $color, $key: light);
+  position: relative;
+
+  header {
+    width: 360px;
+    position: fixed;
+    z-index: 10;
+    background: map-get($map: $color, $key: dark);
+
+    #header_contents {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+
+      img {
+        height: 25px;
+      }
+
+      #header_right {
+        width: 54px;
+        display: flex;
+        justify-content: space-between;
+
+        i {
+          color: map-get($map: $color, $key: light);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  figure {
+    position: fixed;
+    top: 50px;
+    width: 360px;
+    height: 220px;
+    z-index: 10;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & > div {
+    position: absolute;
+    top: 270px;
+    background: map-get($map: $color, $key: light);
+    width: 100%;
+    padding: 12px;
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+
+      .heading {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+        .add {
+          font: normal 1.4rem/1 "youtube";
+          color: map-get($map: $color, $key: sub);
+        }
+      }
+
+      .middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: bold;
+          img {
+            width: 35px;
+            border-radius: 50%;
+          }
+          span {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: map-get($map: $color, $key: sub);
+          }
+        }
+
+        .middel_btn {
+          span {
+            @include btnType();
+          }
+        }
+      }
+
+      .subinfo {
+        display: flex;
+        justify-content: space-between;
+        span {
+          @include btnType();
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+      }
+
+      .review {
+        background: map-get($map: $color, $key: bg);
+        padding: 12px;
+        border-radius: 10px;
+        .review_title {
+          margin-bottom: 10px;
+
+          span:last-child {
+            color: map-get($map: $color, $key: sub);
+            font-size: 1.4rem;
+          }
+        }
+
+        .review_content {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          img {
+            width: 30px;
+            border-radius: 50%;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    // 오른쪽에 컨텐츠 있기 때문에 - width 100% X
+    // 1. 해쉬컨텐츠 client Width값 체크(500px)
+    // 2. (360px에서)벗어나는 공간만큼의 여백이 있어야 스크롤 가능할 것
+    // 3. 140px만큼의 여백이 있어야 함
+
+    // 두번째 전제조건
+    // > 슬라이드를 반복해서 여러번 스크롤 한다면
+    // 어떠한 장치도 해놓지 않는다면 > 똑같은 지점에 다시 하면 원상복구
+    // > 이미 움직인(20px)만큼을 알고 있어야 함
+    // 앞에 이미 움직인 값을 알고 다시 거기서 움직여야 함
+
+    // 이를 해결하려면
+    // 1. 최초 컨택포인트 알아야(마운트 시점의
+    // 2. 움직였을때 이동한 만큼의 간격 체크
+    // 3. 손가락이 떨어진 지점과 실제로 움직인 거리 알아야
+    // 4. 두번째 손가락이 갔을 때 값 알아야
+
+    // 이렇게 했을 때 남은 중요한 문제 : 제약이 없음 > 640을 초과한다면 마지막 지점 설정 필요(0, 끝점을 알고있어야)
+
+    .hashlist {
+      position: sticky;
+      // top값 : 50 + 220
+      top: 268px;
+      width: 360px;
+      padding: 10px 0;
+      opacity: 0;
+      background: map-get($map: $color, $key: light);
+      overflow: hidden;
+      transition: all 1s;
+      &.active {
+        opacity: 1;
+      }
+      // border: 1px solid #f00;
+      .hashcontent {
+        width: 586px;
+        display: flex;
+        gap: 12px;
+        // padding: 0 14px;
+        background: map-get($map: $color, $key: light);
+        // border: 1px solid #ccc;
+        li {
+          a {
+            display: inline-block;
+            padding: 6px 10px;
+            font-size: 1.4rem;
+            border-radius: 8px;
+            background: map-get($map: $color, $key: bg);
+          }
+        }
+      }
+    }
+    .ad01 {
+      width: 100%;
+      background: map-get($map: $color, $key: light);
+      margin: 10px 0;
+      margin-top: -40px;
+      .adimg {
+        width: 100%;
+        height: 379px;
+        background: url("./imgs/ad01.jpg") center/cover no-repeat;
+      }
+      .adtitle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: #1a76f5;
+        background: map-get($map: $color, $key: ad-sub);
+        padding: 14px 10px;
+      }
+      .adinfo {
+        display: flex;
+        gap: 16px;
+        padding: 14px 10px;
+        .fa-facebook-square {
+          font-size: 4rem;
+          color: map-get($map: $color, $key: ad);
+        }
+      }
+      .adddesc {
+        width: 100%;
+        span {
+          display: block;
+          &:first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          &:nth-child(2) {
+            margin: 6px 0;
+            color: map-get($map: $color, $key: sub);
+          }
+          &:last-child {
+            font-size: 1.4rem;
+            color: map-get($map: $color, $key: sub);
+            b {
+              color: map-get($map: $color, $key: dark);
+            }
+          }
+        }
+      }
+    }
+    .contents {
+      background: map-get($map: $color, $key: light);
+      .content {
+        width: 100%;
+        background: map-get($map: $color, $key: light);
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

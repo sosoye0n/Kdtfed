@@ -1,0 +1,77 @@
+// 내거
+/* reset */
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// /* contents */
+// body {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// #container {
+//   width: 450px;
+//   border: 1px solid map-get($map: $color, $key: item);
+//   border-radius: 8px;
+//   box-shadow: 0 0 8px map-get($map: $color, $key: shadow);
+//   background: rgba($color: #fff, $alpha: 0.5);
+//   padding: 20px;
+// }
+
+/// 쌤거
+///
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* contents */
+// body {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+#container {
+  width: 550px;
+  margin: 100px auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    width: 100%;
+    label {
+      margin-right: 20px;
+      input[type="text] {
+        width: 80px;
+height: 30px;
+border: none;
+border-bottom: 1px solid #ccc
+      }
+  }
+  #result {
+    width: 400px;
+    padding-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    p {
+      font-size: 20px;
+      line-height: 140%;
+    .accent {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    }
+  }
+}

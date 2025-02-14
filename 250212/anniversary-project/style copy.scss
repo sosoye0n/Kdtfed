@@ -1,0 +1,70 @@
+$color: (
+  light: #fff,
+  dark: #000,
+  title: #666,
+  shadow: #333,
+  accent: #222,
+  bg: #747474,
+  item: #ccc,
+);
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* common */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // object-fit: cover;
+}
+
+/* content */
+#container {
+  width: 450px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 40px;
+  }
+  #result {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px map-get($map: $color, $key: shadow);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    p {
+      font-size: 26px;
+      line-height: 3;
+      text-align: left;
+      font-weight: bold;
+      &:first-child {
+        font-size: 22px;
+        font-weight: normal;
+      }
+    }
+  }
+}

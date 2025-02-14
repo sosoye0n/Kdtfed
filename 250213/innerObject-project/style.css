@@ -1,0 +1,22 @@
+/* reset */
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* contents */
+#container {
+  width: 550px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container form {
+  width: 100%;
+}
+#container form label {
+  margin-right: 20px;
+}

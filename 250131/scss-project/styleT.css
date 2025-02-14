@@ -59,6 +59,7 @@ body {
   height: 100%;
   background: #fff;
   border: 1px solid #ddd;
+  overflow: hidden;
 }
 .project-inner input {
   display: none;
@@ -75,81 +76,88 @@ body {
 .project-inner input[id=tab2]:checked ~ .btn label[for=tab2]::before {
   border: 1px solid #bbb;
 }
-.project-inner input[id=tab2][id=tab3]:checked ~ .tabs {
+.project-inner input[id=tab3]:checked ~ .tabs {
   margin-left: -200%;
 }
-.project-inner input[id=tab2][id=tab3]:checked ~ .btn label[for=tab3]::before {
+.project-inner input[id=tab3]:checked ~ .btn label[for=tab3]::before {
   border: 1px solid #bbb;
 }
-.project-inner input .tabs {
+.project-inner .tabs {
   width: 300%;
   height: 100%;
   transition: all 0.3s;
 }
-.project-inner input .tabs .tab {
+.project-inner .tabs .tab {
   width: 33.3333%;
   height: 100%;
   float: left;
   display: flex;
 }
-.project-inner input .tabs .tab > div {
+.project-inner .tabs .tab > div {
   height: 100%;
 }
-.project-inner input .tabs .tab > div.project-info {
+.project-inner .tabs .tab > div.project-info {
+  width: 25%;
+}
+.project-inner .tabs .tab > div.project-photo {
+  width: 75%;
+  overflow: hidden;
+}
+.project-inner .tabs .tab .project-info {
   padding: 50px;
   position: relative;
 }
-.project-inner input .tabs .tab > div.project-info h3 {
+.project-inner .tabs .tab .project-info h3 {
   font-size: 2rem;
   position: relative;
   margin-bottom: 10px;
 }
-.project-inner input .tabs .tab > div.project-info p {
+.project-inner .tabs .tab .project-info p {
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
-.project-inner input .tabs .tab > div.project-info ul {
+.project-inner .tabs .tab .project-info ul {
   margin: 30px 0;
   line-height: 2.4rem;
 }
-.project-inner input .tabs .tab > div.project-info ul li::before {
+.project-inner .tabs .tab .project-info ul li::before {
   content: "\f105";
-  font-family: fontawesome;
+  font-family: "fontawesome";
   margin-right: 10px;
 }
-.project-inner input .tabs .tab > div.project-info .detail {
+.project-inner .tabs .tab .project-info .detail {
   margin-bottom: 50px;
   display: flex;
 }
-.project-inner input .tabs .tab > div.project-info .detail div {
+.project-inner .tabs .tab .project-info .detail div {
   text-align: center;
-  width: 33.33%;
+  width: 33.3333%;
   color: #999;
 }
-.project-inner input .tabs .tab > div.project-info .detail div span {
+.project-inner .tabs .tab .project-info .detail div span {
   display: block;
   font-weight: bold;
   font-size: 2.6rem;
   color: #000;
   margin-bottom: 10px;
 }
-.project-inner input .tabs .tab > div.project-info .view-project {
+.project-inner .tabs .tab .project-info .view-project {
   background: #000;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   padding: 10px 14px;
   text-align: center;
   display: inline-block;
   width: 220px;
 }
-.project-inner input .tabs .tab > div.project-info .view-project .fas {
+.project-inner .tabs .tab .project-info .view-project .fas {
   transition: all 0.3s;
 }
-.project-inner input .tabs .tab > div.project-info .view-project:hover .fas {
+.project-inner .tabs .tab .project-info .view-project:hover .fas {
   margin-left: 30px;
 }
-.project-inner input .tabs .tab::before {
+.project-inner .tabs .tab .project-info::before {
   content: attr(data-text);
   font-size: 10rem;
   color: #eee;
@@ -157,7 +165,7 @@ body {
   top: -10px;
   left: 10px;
 }
-.project-inner input .tabs.project-photo {
+.project-inner .tabs .tab .project-photo {
   width: 75%;
   overflow: hidden;
 }
